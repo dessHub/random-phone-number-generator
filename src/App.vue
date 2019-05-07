@@ -1,7 +1,7 @@
 <template>
-  <div id="app">
+  <v-app id="app">
     <TableComponent msg="Welcome to Your Vue.js App" v-bind:numbers="numbers"/>
-  </div>
+  </v-app>
 </template>
 
 <script>
@@ -20,7 +20,7 @@ export default {
   },
   methods: {
     getNumbers: () => {
-      return Array.from(getRandomNumbers());
+      return getRandomNumbers();
     },
   }
 }
