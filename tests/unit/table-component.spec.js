@@ -3,10 +3,10 @@ import TableComponent from '@/components/TableComponent.vue'
 
 describe('TableComponent.vue', () => {
   it('renders props.msg when passed', () => {
-    const msg = 'new message'
+    const numbers = [12345678, 23456789];
     const wrapper = shallowMount(TableComponent, {
-      propsData: { msg }
+      propsData: { numbers }
     })
-    expect(wrapper.text()).toMatch(msg)
+    expect(wrapper.props().numbers).toBe(numbers)
   })
 })
