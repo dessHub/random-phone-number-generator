@@ -1,17 +1,27 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <TableComponent msg="Welcome to Your Vue.js App" v-bind:numbers="numbers"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TableComponent from './components/TableComponent.vue'
+import { getRandomNumbers } from './helpers';
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+   TableComponent
+  },
+  data() {
+    return {
+      numbers: this.getNumbers(),
+    }
+  },
+  methods: {
+    getNumbers: () => {
+      return Array.from(getRandomNumbers());
+    },
   }
 }
 </script>
