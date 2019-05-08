@@ -2,6 +2,13 @@
   <v-app id="app">
     <div id="action-buttons">
       <span>
+          <download-csv
+            :data   = "numbers"
+            name    = "filename.csv">
+            <v-btn round color="normal" dark>Download CSV</v-btn>
+          </download-csv>
+      </span>
+      <span>
         <Button v-bind:getNumbers="getNumbers" />
       </span>
     </div>
