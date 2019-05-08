@@ -8,7 +8,6 @@ const generateNumbers = (maxV, minV) => {
 const createPhoneNoObjects = (numbers) => {
   let numberArr = [];
   Array.from(numbers).forEach( key => {
-    console.log(key);
     const obj = new Object();
     obj.phoneNumber = key;
     obj.index = numberArr.length + 1;
