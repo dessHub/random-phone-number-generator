@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button.vue renders correctly 1`] = `
+<div
+  class="text-xs-center"
+>
+  <v-btn
+    color="normal"
+    dark=""
+    round=""
+  >
+    Generate New Phone
+    Numbers
+  </v-btn>
+</div>
+`;
