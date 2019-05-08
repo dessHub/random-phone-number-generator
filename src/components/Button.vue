@@ -1,6 +1,6 @@
 <template>
   <div class="text-xs-center">
-    <v-btn round color="normal" @click="getNumbers" dark>Generate New Phone
+    <v-btn class="btn-generate" round color="normal" @click="getNumbers" dark>Generate New Phone
       Numbers</v-btn>
   </div>
 </template>

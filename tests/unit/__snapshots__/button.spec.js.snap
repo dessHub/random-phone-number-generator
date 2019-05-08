@@ -5,6 +5,7 @@ exports[`Button.vue renders correctly 1`] = `
   class="text-xs-center"
 >
   <v-btn
+    class="btn-generate"
     color="normal"
     dark=""
     round=""
