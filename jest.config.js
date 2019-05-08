@@ -14,6 +14,7 @@ module.exports = {
   collectCoverageFrom: [
     'src/**/*.{js,vue}',
     '!src/main.js',
+    '!src/plugins/*'
   ],
   transformIgnorePatterns: [
     '/node_modules/'
