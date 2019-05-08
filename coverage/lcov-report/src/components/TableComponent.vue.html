@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for src/App.vue</title>
+    <title>Code coverage report for src/components/TableComponent.vue</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../prettify.css" />
-    <link rel="stylesheet" href="../base.css" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(../sort-arrow-sprite.png);
+            background-image: url(../../sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -16,13 +16,13 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../index.html">All files</a> / <a href="index.html">src</a> App.vue
+      <a href="../../index.html">All files</a> / <a href="index.html">src/components</a> TableComponent.vue
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">71.43% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>5/7</span>
+        <span class='fraction'>1/1</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,18 +30,18 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/1</span>
+        <span class='fraction'>1/1</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">71.43% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>5/7</span>
+        <span class='fraction'>1/1</span>
       </div>
     </div>
   </div>
-  <div class='status-line medium'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -83,13 +83,7 @@
 38
 39
 40
-41
-42
-43
-44
-45
-46
-47</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+41</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -98,9 +92,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -109,20 +100,17 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -136,50 +124,44 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
-  &lt;v-app id="app"&gt;
-    &lt;Button v-bind:getNumbers="getNumbers" /&gt;
-    &lt;TableComponent msg="Welcome to Your Vue.js App"
-                    v-bind:numbers="numbers"/&gt;
-  &lt;/v-app&gt;
-&lt;/template&gt;
+  &lt;v-container&gt;
+    &lt;div&gt;
+      &lt;v-data-table
+       :headers="headers"
+        :items="numbers"
+        :pagination.sync="pagination"
+       class="elevation-1"
+      &gt;
 &nbsp;
+      &lt;template 
+          slot="items" 
+          slot-scope="props"
+      &gt;
+        &lt;td class="text-xs-left"&gt;{{ props.item.index }}&lt;/td&gt;
+        &lt;td class="text-xs-left"&gt;07{{ props.item.phoneNumber }}&lt;/td&gt;
+      &lt;/template&gt;
+     &lt;/v-data-table&gt;
+   &lt;/div&gt;
+  &lt;/v-container&gt;
+&lt;/template&gt;
 &lt;script&gt;
-import TableComponent from './components/TableComponent.vue'
-import Button from './components/Button.vue'
-import { getRandomNumbers } from './helpers';
 &nbsp;
 export default {
-  name: 'app',
-  components: {
-   TableComponent,
-   Button
+  props: {
+    numbers: Array
   },
-  created(){
-    this.numbers = getRandomNumbers();
-  },
-  data() {
-    return {
-      numbers: [],
-    }
-  },
-  methods: {
-<span class="fstat-no" title="function not covered" >    getNumbers: function() {</span>
-<span class="cstat-no" title="statement not covered" >      this.numbers = getRandomNumbers();</span>
-<span class="cstat-no" title="statement not covered" >      return ;</span>
-    },
-  }
+  data: () =&gt; ({
+        pagination: {
+          rowsPerPage: 25,
+        },
+        headers: [
+          { text: 'Index', value: "index" },
+          { text: 'Phone Numbers', value: "phoneNumber" }
+        ],
+  }),
 }
 &lt;/script&gt;
-&nbsp;
-&lt;style&gt;
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+&lt;style lang="stylus" scoped&gt;
 &lt;/style&gt;
 &nbsp;</pre></td></tr>
 </table></pre>
@@ -190,7 +172,7 @@ export default {
   generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed May 08 2019 13:21:56 GMT+0300 (East Africa Time)
 </div>
 </div>
-<script src="../prettify.js"></script>
+<script src="../../prettify.js"></script>
 <script>
 window.onload = function () {
         if (typeof prettyPrint === 'function') {
@@ -198,6 +180,6 @@ window.onload = function () {
         }
 };
 </script>
-<script src="../sorter.js"></script>
+<script src="../../sorter.js"></script>
 </body>
 </html>
