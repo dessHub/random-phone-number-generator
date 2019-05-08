@@ -9,8 +9,8 @@ const createPhoneNoObjects = (numbers) => {
   let numberArr = [];
   Array.from(numbers).forEach( key => {
     const obj = new Object();
-    obj.phoneNumber = key;
     obj.index = numberArr.length + 1;
+    obj.phoneNumber = `07${key}`;
     numberArr.push(obj);
   })
   return numberArr;
@@ -18,7 +18,7 @@ const createPhoneNoObjects = (numbers) => {
 
 export const getRandomNumbers = () => {
   let phoneN = new Set();
-  while(phoneN.size < 10001){
+  while(phoneN.size < 10000){
     phoneN.add(generateNumbers(99999999, 10000000));
   }
   return createPhoneNoObjects(phoneN.values());

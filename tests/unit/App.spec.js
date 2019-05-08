@@ -13,7 +13,7 @@ describe('App.vue', () => {
     const wrapper = mount(App);
     const getNumbers = jest.fn();
     wrapper.setMethods({getNumbers});
-    const button = wrapper.find('v-btn');
+    const button = wrapper.find('.btn-generate');
     button.trigger('click');
     expect(getNumbers).toBeCalled();
   })

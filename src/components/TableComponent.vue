@@ -13,7 +13,7 @@
           slot-scope="props"
       >
         <td class="text-xs-left">{{ props.item.index }}</td>
-        <td class="text-xs-left">07{{ props.item.phoneNumber }}</td>
+        <td class="text-xs-left">{{ props.item.phoneNumber }}</td>
       </template>
      </v-data-table>
    </div>

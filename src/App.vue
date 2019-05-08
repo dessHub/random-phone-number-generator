@@ -1,6 +1,10 @@
 <template>
   <v-app id="app">
-    <Button v-bind:getNumbers="getNumbers" />
+    <div id="action-buttons">
+      <span>
+        <Button v-bind:getNumbers="getNumbers" />
+      </span>
+    </div>
     <TableComponent msg="Welcome to Your Vue.js App"
                     v-bind:numbers="numbers"/>
   </v-app>
@@ -42,5 +46,13 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+#action-buttons {
+  float: left;
+}
+
+#action-buttons span {
+  display: inline-block;
 }
 </style>
