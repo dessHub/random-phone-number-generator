@@ -1,26 +1,34 @@
 <template>
   <v-app id="app">
-    <TableComponent msg="Welcome to Your Vue.js App" v-bind:numbers="numbers"/>
+    <Button v-bind:getNumbers="getNumbers" />
+    <TableComponent msg="Welcome to Your Vue.js App"
+                    v-bind:numbers="numbers"/>
   </v-app>
 </template>
 
 <script>
 import TableComponent from './components/TableComponent.vue'
+import Button from './components/Button.vue'
 import { getRandomNumbers } from './helpers';
 
 export default {
   name: 'app',
   components: {
-   TableComponent
+   TableComponent,
+   Button
+  },
+  created(){
+    this.numbers = getRandomNumbers();
   },
   data() {
     return {
-      numbers: this.getNumbers(),
+      numbers: [],
     }
   },
   methods: {
-    getNumbers: () => {
-      return getRandomNumbers();
+    getNumbers: function() {
+      this.numbers = getRandomNumbers();
+      return ;
     },
   }
 }
