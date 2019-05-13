@@ -16,10 +16,10 @@ const createPhoneNoObjects = (numbers) => {
   return numberArr;
 };
 
-export const getRandomNumbers = () => {
+export const getRandomNumbers = (min, max, quantity) => {
   let phoneN = new Set();
-  while(phoneN.size < 10000){
-    phoneN.add(generateNumbers(99999999, 10000000));
+  while(phoneN.size < quantity){
+    phoneN.add(generateNumbers(max, min));
   }
   return createPhoneNoObjects(phoneN.values());
 }
