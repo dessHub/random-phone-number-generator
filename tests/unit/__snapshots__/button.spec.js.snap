@@ -1,17 +1,313 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Button.vue renders correctly 1`] = `
-<div
-  class="text-xs-center"
+<form
+  class="v-form"
+  novalidate="novalidate"
 >
-  <v-btn
-    class="btn-generate"
-    color="normal"
-    dark=""
-    round=""
+  <div
+    class="container grid-list-xl fluid"
   >
-    Generate New Phone
-    Numbers
-  </v-btn>
-</div>
+    <div
+      class="layout wrap"
+    >
+      <div
+        class="flex xs12 sm3"
+      >
+        <div
+          class="v-input v-input--slider v-input--slider--thumb-label theme--light"
+          id="min"
+        >
+          <div
+            class="v-input__control"
+          >
+            <div
+              class="v-input__slot"
+            >
+              <label
+                class="v-label theme--light"
+                for="min"
+                style="left: 0px; position: relative;"
+              >
+                Min
+              </label>
+              <div
+                class="v-slider"
+              >
+                <input
+                  aria-label="Min"
+                  aria-readonly="false"
+                  aria-valuemax="99999998"
+                  aria-valuemin="10000000"
+                  id="min"
+                  readonly="readonly"
+                  role="slider"
+                />
+                <div
+                  class="v-slider__track__container"
+                >
+                  <div
+                    class="v-slider__track"
+                    style="left: 7px; width: 100%;"
+                  />
+                  <div
+                    class="v-slider__track-fill orange"
+                    style="left: 0px; width: 0%;"
+                  />
+                </div>
+                <div
+                  class="v-slider__thumb-container v-slider__thumb-container--show-label"
+                  style="left: 0%;"
+                >
+                  <div
+                    class="v-slider__thumb"
+                  />
+                  <div
+                    class="v-slider__thumb-label__container"
+                    style="display: none;"
+                  >
+                    <div
+                      class="v-slider__thumb-label"
+                      style="height: 32px; width: 32px;"
+                    >
+                      <span />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="v-messages theme--light"
+            >
+              <span
+                class="v-messages__wrapper"
+                name="message-transition"
+                tag="div"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+       
+      <div
+        class="flex xs12 sm3"
+      >
+        <div
+          class="v-input v-input--slider v-input--slider--thumb-label theme--light"
+          id="max"
+        >
+          <div
+            class="v-input__control"
+          >
+            <div
+              class="v-input__slot"
+            >
+              <label
+                class="v-label theme--light"
+                for="max"
+                style="left: 0px; position: relative;"
+              >
+                Max
+              </label>
+              <div
+                class="v-slider"
+              >
+                <input
+                  aria-label="Max"
+                  aria-readonly="false"
+                  aria-valuemax="99999999"
+                  aria-valuemin="10000001"
+                  id="max"
+                  readonly="readonly"
+                  role="slider"
+                />
+                <div
+                  class="v-slider__track__container"
+                >
+                  <div
+                    class="v-slider__track"
+                    style="left: 7px; width: 100%;"
+                  />
+                  <div
+                    class="v-slider__track-fill orange"
+                    style="left: 0px; width: 0%;"
+                  />
+                </div>
+                <div
+                  class="v-slider__thumb-container v-slider__thumb-container--show-label"
+                  style="left: 0%;"
+                >
+                  <div
+                    class="v-slider__thumb"
+                  />
+                  <div
+                    class="v-slider__thumb-label__container"
+                    style="display: none;"
+                  >
+                    <div
+                      class="v-slider__thumb-label"
+                      style="height: 32px; width: 32px;"
+                    >
+                      <span />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="v-messages theme--light"
+            >
+              <span
+                class="v-messages__wrapper"
+                name="message-transition"
+                tag="div"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+       
+      <div
+        class="flex xs12 sm4"
+      >
+        <div
+          class="v-input v-input--slider v-input--slider--thumb-label theme--light"
+          id="quantity"
+        >
+          <div
+            class="v-input__control"
+          >
+            <div
+              class="v-input__slot"
+            >
+              <label
+                class="v-label theme--light"
+                for="quantity"
+                style="left: 0px; position: relative;"
+              >
+                Quantity
+              </label>
+              <div
+                class="v-slider"
+              >
+                <input
+                  aria-label="Quantity"
+                  aria-readonly="false"
+                  aria-valuemax="10000"
+                  aria-valuemin="1"
+                  id="quantity"
+                  readonly="readonly"
+                  role="slider"
+                />
+                <div
+                  class="v-slider__track__container"
+                >
+                  <div
+                    class="v-slider__track"
+                    style="left: 7px; width: 100%;"
+                  />
+                  <div
+                    class="v-slider__track-fill orange"
+                    style="left: 0px; width: 0%;"
+                  />
+                </div>
+                <div
+                  class="v-slider__thumb-container v-slider__thumb-container--show-label"
+                  style="left: 0%;"
+                >
+                  <div
+                    class="v-slider__thumb"
+                  />
+                  <div
+                    class="v-slider__thumb-label__container"
+                    style="display: none;"
+                  >
+                    <div
+                      class="v-slider__thumb-label"
+                      style="height: 32px; width: 32px;"
+                    >
+                      <span />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="v-messages theme--light"
+            >
+              <span
+                class="v-messages__wrapper"
+                name="message-transition"
+                tag="div"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+       
+      <div
+        class="flex xs12 sm1"
+      >
+        <button
+          class="btn-generate v-btn v-btn--disabled v-btn--round theme--light normal--text"
+          disabled="disabled"
+          type="submit"
+        >
+          <div
+            class="v-btn__content"
+          >
+            Generate
+          </div>
+        </button>
+      </div>
+    </div>
+     
+    <div
+      class="layout wrap"
+    >
+      <div
+        class="flex xs12 sm3"
+      >
+        <span>
+          Min - 07
+        </span>
+      </div>
+       
+      <div
+        class="flex xs12 sm3"
+      >
+        <span>
+          Max - 07
+        </span>
+      </div>
+       
+      <div
+        class="flex xs12 sm3"
+      >
+        <span>
+           Phone Numbers
+        </span>
+      </div>
+       
+      <div
+        class="flex xs12 sm3"
+      >
+        <download-csv
+          name="filename.csv"
+        >
+          <button
+            class="v-btn v-btn--round theme--dark normal"
+            type="button"
+          >
+            <div
+              class="v-btn__content"
+            >
+              Download CSV
+            </div>
+          </button>
+        </download-csv>
+      </div>
+    </div>
+  </div>
+</form>
 `;

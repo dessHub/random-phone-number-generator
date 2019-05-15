@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">71.43% </span>
+        <span class="strong">50% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>5/7</span>
+        <span class='fraction'>5/10</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>0/1</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">71.43% </span>
+        <span class="strong">50% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>5/7</span>
+        <span class='fraction'>5/10</span>
       </div>
     </div>
   </div>
@@ -108,7 +108,51 @@
 63
 64
 65
-66</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -139,10 +183,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -150,6 +197,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -175,20 +227,38 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
   &lt;v-app id="app"&gt;
-    &lt;div id="action-buttons"&gt;
-      &lt;span&gt;
-          &lt;download-csv
-            :data   = "numbers"
-            name    = "filename.csv"&gt;
-            &lt;v-btn round color="normal" dark&gt;Download CSV&lt;/v-btn&gt;
-          &lt;/download-csv&gt;
-      &lt;/span&gt;
-      &lt;span&gt;
-        &lt;Button v-bind:getNumbers="getNumbers" /&gt;
-      &lt;/span&gt;
-    &lt;/div&gt;
-    &lt;TableComponent msg="Welcome to Your Vue.js App"
-                    v-bind:numbers="numbers"/&gt;
+  &lt;v-layout&gt;
+    &lt;v-flex xs12 sm10 offset-sm1&gt;
+      &lt;v-card&gt;
+          &lt;v-container fill-height fluid&gt;
+            &lt;v-layout fill-height&gt;
+              &lt;v-flex xs12 align-end flexbox&gt;
+                &lt;span class="headline"&gt;Random Phone Number Generator&lt;/span&gt;
+                &lt;v-card-title&gt;
+                  &lt;div&gt;
+                     &lt;p&gt;1. Generate Phone Numbers by selecting Min, Max and
+                              Quantity. Then hit generate button when it is
+                              active.&lt;/p&gt;
+                     &lt;p&gt;2. You can sort phone numbers
+                       by clicking on the table column name i.e Phone
+                       Numbers. Whe arrow up, items are sort by
+                       ascending order.&lt;/p&gt;
+                  &lt;/div&gt;
+                &lt;/v-card-title&gt;
+                &lt;Button
+                  v-bind:getNumbers="getNumbers"
+                  v-bind:numbers="numbers"
+                  v-bind:max="max"
+                  v-bind:min="min"
+                  v-bind:quantity="quantity"
+                  /&gt;
+              &lt;/v-flex&gt;
+            &lt;/v-layout&gt;
+          &lt;/v-container&gt;
+        &lt;TableComponent v-bind:numbers="numbers" /&gt;
+      &lt;/v-card&gt;
+    &lt;/v-flex&gt;
+  &lt;/v-layout&gt;
   &lt;/v-app&gt;
 &lt;/template&gt;
 &nbsp;
@@ -204,16 +274,22 @@ export default {
    Button
   },
   created(){
-    this.numbers = getRandomNumbers();
+    this.numbers = getRandomNumbers(this.min, this.max, this.quantity);
   },
   data() {
     return {
       numbers: [],
+      min: 10000000,
+      max: 99999999,
+      quantity: 10
     }
   },
   methods: {
-<span class="fstat-no" title="function not covered" >    getNumbers: function() {</span>
-<span class="cstat-no" title="statement not covered" >      this.numbers = getRandomNumbers();</span>
+<span class="fstat-no" title="function not covered" >    getNumbers: function(min, max, quantity) {</span>
+<span class="cstat-no" title="statement not covered" >      this.min = min;</span>
+<span class="cstat-no" title="statement not covered" >      this.max = max;</span>
+<span class="cstat-no" title="statement not covered" >      this.quantity = quantity;</span>
+<span class="cstat-no" title="statement not covered" >      this.numbers = getRandomNumbers(min, max, quantity);</span>
 <span class="cstat-no" title="statement not covered" >      return ;</span>
     },
   }
@@ -230,12 +306,14 @@ export default {
   margin-top: 60px;
 }
 &nbsp;
-#action-buttons {
-  float: left;
+.v-card__title div {
+  text-align: left;
+  font-size: .7rem;
+  margin-bottom: 1px;
 }
 &nbsp;
-#action-buttons span {
-  display: inline-block;
+.v-form {
+  border-style: outset;
 }
 &lt;/style&gt;
 &nbsp;</pre></td></tr>
@@ -244,7 +322,7 @@ export default {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed May 08 2019 19:35:33 GMT+0300 (East Africa Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon May 13 2019 12:20:44 GMT+0300 (East Africa Time)
 </div>
 </div>
 <script src="../prettify.js"></script>
